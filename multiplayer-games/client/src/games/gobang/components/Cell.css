@@ -1,0 +1,110 @@
+.board-container {
+  background: #DEB887;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.board-row {
+  display: flex;
+}
+
+.cell {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.cell::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #333;
+}
+
+.board-row:first-child .cell::before {
+  top: 50%;
+}
+
+.board-row:last-child .cell::before {
+  top: 50%;
+}
+
+.cell::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #333;
+}
+
+.board-row:first-child .cell::after {
+  top: 0;
+}
+
+.board-row:last-child .cell::after {
+  bottom: 0;
+}
+
+.cell-inner {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.cell:hover .cell-inner {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.stone {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  animation: placeStone 0.2s ease;
+}
+
+.stone.black {
+  background: radial-gradient(circle at 30% 30%, #555, #000);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.stone.white {
+  background: radial-gradient(circle at 30% 30%, #fff, #ddd);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cell.last-move .stone {
+  box-shadow: 0 0 0 3px #ff6b6b;
+}
+
+@keyframes placeStone {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

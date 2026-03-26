@@ -1,0 +1,16 @@
+.bottom-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.bottom-cards .label {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.bottom-cards .cards {
+  display: flex;
+  gap: 5px;
+}

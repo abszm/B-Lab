@@ -1,0 +1,112 @@
+.landlord-card {
+  width: 70px;
+  height: 100px;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.landlord-card.small {
+  width: 50px;
+  height: 70px;
+}
+
+.landlord-card:hover {
+  transform: translateY(-10px);
+}
+
+.landlord-card.selected {
+  transform: translateY(-20px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.5);
+}
+
+.landlord-card::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.card-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.card-value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-value span {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--card-color);
+  line-height: 1.2;
+}
+
+.card-value .suit {
+  font-size: 12px;
+}
+
+.red {
+  color: #e63946;
+}
+
+.card-suit-large {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: var(--card-color);
+}
+
+.landlord-card.small .card-value span {
+  font-size: 12px;
+}
+
+.landlord-card.small .card-value .suit {
+  font-size: 10px;
+}
+
+.landlord-card.small .card-suit-large {
+  font-size: 24px;
+}
+
+.joker-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.joker-icon {
+  font-size: 28px;
+}
+
+.joker-label {
+  font-size: 12px;
+  color: #9b59b6;
+  font-weight: bold;
+}
+
+.landlord-card.small .joker-icon {
+  font-size: 20px;
+}
+
+.landlord-card.small .joker-label {
+  font-size: 10px;
+}

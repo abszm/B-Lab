@@ -1,0 +1,78 @@
+.player-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  min-width: 120px;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.player-info.active {
+  border-color: #667eea;
+  transform: scale(1.05);
+}
+
+.player-avatar {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.avatar.black {
+  background: radial-gradient(circle at 30% 30%, #555, #000);
+}
+
+.avatar.white {
+  background: radial-gradient(circle at 30% 30%, #fff, #ddd);
+  border: 1px solid #ccc;
+}
+
+.player-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.player-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.me-badge {
+  background: #667eea;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.turn-badge {
+  background: #4CAF50;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}

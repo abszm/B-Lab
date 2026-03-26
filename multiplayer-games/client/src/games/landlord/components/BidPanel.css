@@ -1,0 +1,55 @@
+.bid-panel {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.bid-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.bid-info .label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bid-info .current-bid {
+  font-size: 14px;
+  color: #666;
+}
+
+.bid-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.bid-btn {
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.bid-btn:hover {
+  transform: scale(1.05);
+}
+
+.bid-btn.pass {
+  background: #999;
+}
+
+.bid-btn.pass:hover {
+  background: #888;
+}
